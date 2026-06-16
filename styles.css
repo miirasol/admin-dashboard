@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	font-family: Roboto;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"aside header"
+		"aside main";
+}
+
+.container * {
+    padding: 16px;
+}
+
+header {
+	grid-area: header;
+
+	background-color: yellow;
+}
+
+aside {
+	grid-area: aside;
+	background-color: green;
+}
+
+main {
+	grid-area: main;
+
+	background-color: aqua;
+}
