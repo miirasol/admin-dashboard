@@ -9,7 +9,7 @@
 }
 
 .container {
-    min-height: 100vh;
+	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 200px 1fr;
 	grid-template-rows: auto 1fr;
@@ -27,104 +27,159 @@ header {
 	display: grid;
 
 	grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 8px;
+	grid-template-rows: auto 1fr;
+	gap: 8px;
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .search input {
-    width: 28rem;
-    height: 1rem;
-    padding: 0.75rem 1rem;
+	width: 28rem;
+	height: 1rem;
+	padding: 0.75rem 1rem;
 
-    border: none;
-    border-radius: 32px;
-    
-    background-color: #E2E8F1;
+	border: none;
+	border-radius: 32px;
+
+	background-color: #e2e8f1;
 }
 
 .search input:focus {
-    padding: 0.75rem 1rem;
+	padding: 0.75rem 1rem;
 
-    outline: 2px solid blue;
+	outline: 2px solid blue;
 }
 
 .search svg {
-    width: 1.25rem;
-    height: auto;
+	width: 1.25rem;
+	height: auto;
 }
 
 .account {
-    padding-left: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.6rem;
+	padding-left: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.6rem;
 }
 
 .account svg {
-    flex-shrink: 0;
-    width: 1.25rem;
-    height: auto;
+	flex-shrink: 0;
+	width: 1.25rem;
+	height: auto;
 }
 
 .account img {
-    width: 36px;
-    height:auto;
+	width: 36px;
+	height: auto;
 
-    background-color: #FACC15;
-    border-radius: 50%;
+	background-color: #facc15;
+	border-radius: 50%;
 }
 
 .greeting {
-    display: flex;
-    justify-content: start;
-    gap: 16px;
+	display: flex;
+	justify-content: start;
+	gap: 16px;
 }
 
 .greeting > div {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .greeting > div p {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 .greeting img {
-    margin-left: 2rem;
+	margin-left: 2rem;
 
-    width: 48px;
-    height:auto;
+	width: 48px;
+	height: auto;
 
-    background-color: #FACC15;
-    border-radius: 50%;
+	background-color: #facc15;
+	border-radius: 50%;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .buttons button {
-    width: 90px;
-    color: white;
-    background-color: #1993D5;
+	width: 90px;
+	color: white;
+	background-color: #1993d5;
 
-    border: none;
-    border-radius: 32px;
-    padding: .5rem;
+	border: none;
+	border-radius: 32px;
+	padding: 0.5rem;
 }
 
 aside {
 	grid-area: aside;
-	background-color: green;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	gap: 36px;
+
+	background-color: #1993d5;
+	color: white;
+}
+
+aside svg {
+	fill: currentColor;
+}
+
+.brand {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+}
+
+.brand-icon {
+	width: 3rem;
+}
+
+.nav {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	gap: 36px;
+}
+
+.nav svg {
+	width: 1.25rem;
+}
+
+.nav ul {
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+
+	justify-content: center;
+}
+
+.nav li {
+	list-style: none;
+}
+
+.nav a {
+	display: flex;
+	gap: 1rem;
+
+	font-weight: 600;
+
+	color: inherit;
+}
+
+.nav a, .nav a:visited {
+	text-decoration: none;
 }
 
 main {
