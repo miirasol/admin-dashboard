@@ -29,6 +29,9 @@ header {
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: auto 1fr;
 	gap: 8px;
+
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	z-index: 10;
 }
 
 .search {
@@ -185,5 +188,5 @@ aside svg {
 main {
 	grid-area: main;
 
-	background-color: aqua;
+	background-color: #E2E8F1;
 }
