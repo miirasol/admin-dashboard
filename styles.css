@@ -193,11 +193,26 @@ main {
 
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: auto 1fr 1fr;
+
+	grid-template-areas: 
+	"section-names section-names"
+	"cards subcards"
+	"cards subcards"; 
 
 	gap: 16px;
 
 	background-color: #e2e8f1;
+}
+
+.section-names {
+	grid-area: section-names;
+
+	display: grid;
+	grid-template-columns: inherit;
+
+	font-weight: 800;
+	font-size: 1rem;
 }
 
 .cards {
@@ -233,4 +248,12 @@ main {
 
 .card-icons svg {
 	width: 1.5rem;
+}
+
+.subcards {
+	grid-area: subcards;
+	display: grid;
+
+
+	grid-template-rows: repeat(2, 1fr);
 }
