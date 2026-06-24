@@ -193,36 +193,28 @@ main {
 
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	grid-template-rows: auto 1fr 1fr;
-
-	grid-template-areas: 
-	"section-names section-names"
-	"cards subcards"
-	"cards subcards"; 
 
 	gap: 16px;
 
 	background-color: #e2e8f1;
 }
 
-.section-names {
-	grid-area: section-names;
-
+.projects-column {
 	display: grid;
-	grid-template-columns: inherit;
 
-	font-weight: 800;
-	font-size: 1rem;
-}
-
-.cards {
-	display: grid;
 	grid-template-columns: 1fr 1fr;
 
 	gap: 16px;
 }
 
-.card {
+#projects-title {
+	font-size: 1.2rem;
+	font-weight: 400;
+
+	grid-column: 1 / 3;
+}
+
+.project-card {
 	display: grid;
 	padding: 32px 24px;
 
@@ -238,7 +230,11 @@ main {
 		0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-.card-icons {
+.project-card p {
+	color: #475569;
+}
+
+.project-card-icons {
 	display: flex;
 
 	justify-content: flex-end;
@@ -246,14 +242,82 @@ main {
 	gap: 16px;
 }
 
-.card-icons svg {
+.project-card-icons svg {
 	width: 1.5rem;
 }
 
-.subcards {
-	grid-area: subcards;
-	display: grid;
+#announcements-title, 
+#trending-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
 
+#trending-title {
+    margin-top: 32px;
+}
 
-	grid-template-rows: repeat(2, 1fr);
+.announcements {
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.announcements-item p {
+    font-size: 0.8rem;
+    color: #475569;
+    margin-top: 4px;
+}
+
+.announcements-item + .announcements-item {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 16px;       
+    padding-top: 16px;
+}
+
+.trending {
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.trending-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #e2e8f1;
+    object-fit: cover;
+}
+
+.trending-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-handle {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.trending-project {
+    font-size: 0.85rem;
+    color: #64748b;
 }
